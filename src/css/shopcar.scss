@@ -1,0 +1,211 @@
+@import "module/style.scss";
+@import "module/footer.scss";
+body{
+    width: 100%;
+    height: 100%;
+    header{
+    width: 70%;
+    height: 70px;
+    margin: 0 auto;
+    border-bottom: 1px solid;
+    span{
+        height: 100%;
+        width: 110px;
+        float: left;
+        margin-top: 20px;
+        margin-left: 80px;
+        img{
+            height: 40px;
+            width: 110px;
+        }
+    }
+    p{
+        float: right;
+        text-align: center;
+        margin-top: 40px;
+        font-size: 13px;
+        a{
+            color: #b520b5;
+            
+        }
+    }
+    }
+    main{
+        width: 70%;
+        margin: 0 auto;
+        min-height: 500px;
+        div:first-child{
+            width: 100%;
+            height: 80px;
+            h2{
+                font-size: 18px;
+                font-weight: bolder;
+            }
+            p{
+                font-size: 12px;
+                span{
+                    color: #b520b5;
+                }
+            }
+        }
+        div:nth-child(2){
+            width: 100%;
+            height: 50px;
+            display: flex;
+            background: #e2e2e2;
+            align-items: center;
+            label{
+                width: 80px;
+                margin-left: 20px;
+            }
+            p{
+                margin-left: 100px;
+                width: 200px;
+                text-align: center
+
+            }
+            ul{
+                margin-left: 50px;
+                display: flex;
+                li{
+                    margin-left: 70px;
+                }
+            }
+        }
+        div:nth-child(3){
+            width: 100%;
+            min-height: 150px;
+            border: 1px solid;
+            ul{
+                width: 98%;
+                min-height: 100px;
+                margin: auto;
+                margin-top: 10px;
+                background: #f8f8f8;
+                margin-bottom: 20px;
+                
+                li{
+                    display: flex;
+                    align-items: center;
+                    margin-top: 20px;
+                    .label1{
+                        margin-left: 20px;
+                    }
+                    .s1{
+                        width: 150px;
+                        text-align: center;
+                        margin-left: 20px;
+                        img{
+                        width: 80px;
+                        height: 70px;
+                    }
+                    }
+                    p{
+                        margin-left: 20px;
+                        font-size: 12px;
+                        width: 270px;
+                    }
+                    .s2{
+                        width: 80px;
+                        margin-left: 20px;
+                    }
+                    .s3{
+                        width: 60px;
+                    }
+                    .label2{
+                        width: 130px;
+                        text-align: center;
+                        input:nth-child(1){
+                            width: 20px;
+                            height: 80%;
+                            border: none;
+                        }
+                        input:nth-child(2){
+                            width: 40px;
+                            height: 100%;
+                            margin: 0 5px;
+                        }
+                        input:nth-child(3){
+                            width: 20px;
+                            height: 80%;
+                            border: none;
+                        }
+                    }
+                    .s4{
+                        width: 70px;
+                        text-align: center;
+                    }
+                    .s5{
+                        margin-left: 25px;
+                        width: 60px;
+                        text-align: center;
+                    }
+                    .s6{
+                        width: 40px;
+                        margin-left: 45px;
+                        a{
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+        div:last-child{
+            width: 100%;
+            height: 80px;
+            border: 1px solid;
+            margin-top: 10px;
+            line-height: 80px;
+            font-size: 14px;
+            background: #fffef5;
+            i{
+                float: left;
+                margin-left: 10px;
+                span{
+                    color: red;
+                }
+            }
+            .tatolp{
+                float: left;
+                margin-left: 50px;
+                span{
+                    font-size: 22px;
+                    color: red;
+                }
+            }
+            .cacelt{
+                float: right;
+                width: 280px;
+                height: 100px;
+                line-height: 100px;
+                input:first-child{
+                    float: left;
+                    width: 100px;
+                    height: 40px;
+                    text-align: center;
+                    line-height: 40px;
+                    margin-top: 22px;
+                    font-size: 13px;
+                    background: #e5e5e5;
+                    border: none;
+                }
+                input:last-child{
+                    float: right;
+                    width: 140px;
+                    height: 50px;
+                    text-align: center;
+                    line-height: 40px;
+                    margin-top: 15px;
+                    margin-right: 20px;
+                    background: #c00b0b;
+                    border: none;
+                    color: wheat;
+                }
+            }
+        }
+        }
+    footer{
+            width: 70%;
+            margin: 0 auto; 
+        }
+}

@@ -1,0 +1,12 @@
+<script type="text/html" id="shoplist">
+    {{each list item}}
+    <dl>
+        <dt><a href="/html/detail.html?id={{item.id}}"><img src="{{item.img}}"/></a></dt>
+        <dd>
+            <p>{{item.title}}</p>
+            <span>售价￥：<i>{{item.bprice}}</i></span>
+            <stron>充值后相当于￥：<span>{{item.nprice}}</span></stron>
+        </dd>
+    </dl>
+    {{ /each }}
+</script>

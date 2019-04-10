@@ -1,0 +1,119 @@
+@import "module/style.scss";
+@import "module/footer.scss";
+
+body{
+    width: 100%;
+    height: 100%;
+}
+header{
+    width: 1250px;
+    height: 70px;
+    margin: 0 auto;
+    border-bottom: 1px solid;
+    img{
+        width: 150px;
+        height: 60px;
+        margin-top: 5px;
+    }
+}
+main{
+    height: 600px;
+    width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    div:nth-child(1){
+        width: 780px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+     div:nth-child(2){
+         width: 470px;
+          div:nth-child(1){
+              width: 470px;
+              height: 12%;
+              border-bottom: 2px solid #b52024;
+              color: #a2a2a2;
+              h4{
+                  width: 310px;
+                  float: left;
+                  margin-top: 35px;
+              }
+              p{
+                  float: right;
+                  margin-top: 35px;
+                  a{
+                      color: #b52024;
+                  }
+              }
+          }
+          div:nth-child(2){
+              height: 88%;
+              form{
+                  width: 100%;
+                  height: 100%;
+              display: flex;
+              flex-direction: column;
+              label:nth-child(1){
+                  margin-top: 20px;
+                  input{
+                      width: 70%;
+                  }
+              }
+              label:nth-child(2){
+                  input{
+                      width: 70%;
+                  }
+                  button{
+                      width: 26%;
+                      height: 68%;
+                      margin-left: 14px;
+                  }
+              }
+              label:nth-child(3){
+                  input{
+                      width: 99%;
+                  }
+              }
+              label:nth-child(4){
+                  input{
+                      width: 99%;
+                  }
+              }
+              label:nth-child(5){
+                  input{
+                      width: 99%;
+                  }
+              }
+              label:nth-child(6){
+                  display: flex;
+                  align-items: center;
+              }
+              label:last-child{
+                  input{
+                      width: 100%;
+                      background: #9a9a9a;
+                      color: white;
+                      font-size: 17px;
+                      outline: none;
+                  }
+              }
+              label{
+                  width: 100%;
+                  height: 70px;
+                  input{
+                      height: 45px;
+                      color: #acb4c9;
+                  }
+              }
+              }
+          }
+          
+     }
+}
+footer{
+    height: 130px;
+    width: 1250px;
+    margin: 0 auto;
+}

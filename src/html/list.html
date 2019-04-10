@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/list.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="title">
+            <div class="t1">
+                <span class="allshop"><a href="#">全部商品</a></span>
+                <p><span>n</span>/<span>n</span></p>
+                <span class="preshop"><a href="#">&lt;上一页</a></span>
+                <span class="nextshop"><a href="#">下一页&gt;</a></span>
+            </div>
+            <div class="t2">
+                <ul id="sort">
+                    <li><a href="javascript:;" class="inid">默认<img src="/img/down.png" alt=""></a></li>
+                    <li><a href="javascript:;" class="insalenum">销量<img src="/img/down.png" alt=""></a></li>
+                    <li><a href="javascript:;" class="ingood">好评<img src="/img/redup.png" alt=""></a></li>
+                    <li><a href="javascript:;" class="indate">最新<img src="/img/down.png" alt=""></a></li>
+                    <li><a href="javascript:;" class="inprice">价格<img src="/img/down.png" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="clist" id="list-container">
+            <script type="text/html" id="splist">
+            {{each list item}}
+            <dl class="slist1">
+                <dt class="slist1-1"><a href="/html/detail.html?id={{item.id}}"><img src="{{item.img}}" alt=""></a></dt>
+                <dd class="slist1-2"><p class="T1title">{{item.title}}</p><span class="bboxbprice">售价￥<i class="boxbprice">{{item.bprice}}</i></span></dd>
+                <dl class="tanbox">
+                        <dt><img src="{{item.img}}" alt=""></dt>
+                        <dd><h4 class="T2title">{{item.title}}</h4><p class="boxid">产品编号:&nbsp;<b class="newid">{{item.id}}</b></p><span class="bboxnprice">售价￥<i class="boxnprice">{{item.nprice}}</i></span><p class="bboxgood">好评:<br/><em class="boxgood">{{item.good}}</em></p></dd>
+                 </dl>
+            </dl>
+            
+            {{/each}}
+        </script>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="/libs/requirejs/require.js" data-main="/js/list.js"></script>
+</body>
+</html>

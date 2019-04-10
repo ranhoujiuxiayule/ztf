@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/shopcar.css">
+<body>
+    <header>
+        <span><a href="/index.html"><img src="/img/logo.png" alt=""></a></span>
+        <p>您好&nbsp;&nbsp;<i></i><a href="#">退出登录</a>丨<a href="#">更换用户</a></p>
+    </header>
+    <main>
+        <div><h2><img src="/img/shopcar2.png" alt="">我的购物车</h2><p><span>温馨提示：</span>1.选购清单中的商品无法保留库存，请您及时结算。2.商品的价格和库存将以订单提交时为准。3.促销活动满减优惠将均摊至商品小计中。</p></div>
+        <div>
+            <label><input type="checkbox" class="allcheck">全选</label>
+            <p>商品名称</p>
+            <ul>
+                <li>尺寸</li>
+                <li>单价</li>
+                <li>数量</li>
+                <li>优惠</li>
+                <li>小计</li>
+                <li>操作</li>
+            </ul>
+        </div>
+        <div>
+            <ul id="shopcar_container">
+                <script type="text/html" id="shopcar_box">
+                {{each list item}}
+                <li data-id="{{item.id}}" class="shoplist_box">
+                <label for="" class="label1"><input type="checkbox" class="acheck"></label>
+                <span class="s1"><img src="{{item.img[0]}}" alt=""></span>
+                <p class="shop_title"><span>{{item.title}}</span>&nbsp;<span class="colors">{{item.colors}}</span></p>
+                <span class="s2">{{item.size}}</span>
+                <span class="s3">￥<i>{{item.price}}</i></span>
+                <label for="" class="label2"><input type="button" value="+" class="add"><input type="text" value="{{item.num}}" class="t_num"><input type="button" value="-" class="down"></label>
+                <span class="s4">-</span>
+                <span class="s5">￥<i>{{item.hprice}}</i></span>
+                <span class="s6"><a href="javascript:;" class="delbtn">删除</a></span>
+                </li>
+                {{/each}}
+            </script>
+            </ul>
+        </div>
+        <div>
+            <i>数量总计:&nbsp;&nbsp;&nbsp;<span id="tnumber"></span>&nbsp;&nbsp;&nbsp;件</i>
+            <p class="tatolp">产品金额总计(不含运费):&nbsp;￥&nbsp;&nbsp;&nbsp;<span id="totalprice"></span>&nbsp;&nbsp;&nbsp;</p>
+            <p class="cacelt">
+                <input type="button" value="<<去选购" id="goshop"><input type="button" value="￥去结算>>">
+            </p>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="/libs/requirejs/require.js" data-main="/js/shopcar.js"></script>
+</body>
+</html>

@@ -97,9 +97,20 @@ body{
                     position: relative;
                     .tip1{
                         position: absolute;
-                        left:250px;
+                        left:420px;
                         border: 1px solid;
-                        width: 300px;
+                        width: 220px;
+                        height: 100px;
+                        text-align: center;
+                        line-height: 100px;
+                        background: #e5e6e6;
+                        display: none;
+                    }
+                    .tip3{
+                        position: absolute;
+                        left:150px;
+                        border: 1px solid;
+                        width: 220px;
                         height: 100px;
                         text-align: center;
                         line-height: 100px;

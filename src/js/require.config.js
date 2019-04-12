@@ -8,10 +8,14 @@ require.config({
 		"template":"libs/art-template/template-web",
 		"shoplist":"js/module/shoplist",
 		"Swiper" : "libs/swiper/js/swiper",
-		"zoom" :"libs/jquery-plugins/jquery.elevateZoom-3.0.8.min"
+		"zoom" :"libs/jquery-plugins/jquery.elevateZoom-3.0.8.min",
+		"do":"libs/jquery-plugins/jquery.fly.min"
 	},
 	shim:{
 		"zoom":{
+			deps:["jquery"]
+		},
+		"do":{
 			deps:["jquery"]
 		}
 	}

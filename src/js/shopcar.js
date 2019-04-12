@@ -3,6 +3,7 @@ require(["require.config"],function(){
         footer.foot2();
         function Shopcar(){
             this.init();
+            this.user_data();
             this.goshop();
         }
         $.extend(Shopcar.prototype,{
@@ -14,19 +15,35 @@ require(["require.config"],function(){
                     item.hprice=item.num*item.price;
                     // item.push(nprice:item.num*item.price)
                 });
-                this.render(this.data).then(()=>{
-                    this.totalprice();
-                    this.add();
-                    this.check();
-                    
-                })
+                this.render(this.data);
                 
             },
+            user_data(){
+                var _this=this;
+                var user=localStorage.getItem("user");
+                new Promise((resolve, reject)=>{
+                if(user){
+                    user=JSON.parse(user);
+                    $("#user_name").html(user);
+                    $("#register").hide();
+                    $("#clearuser").show();
+                    _this.clear();
+                    $("#islogin").html("切换用户");
+                }
+                else{
+                    $("#user_name").html("欢迎光临凡客诚品");
+                    $("#register").show();
+                    $("#clearuser").hide();
+                    $("#islogin").html("登录");
+                }
+            })
+            },
             render(data){
-                return new Promise((resolve, reject)=>{
+                new Promise((resolve, reject)=>{
                 this.container.html(template("shopcar_box",{list:data}));
-                
-                resolve();
+                this.totalprice();
+                this.add();
+                this.check();
             })
             },
             add(){
@@ -43,6 +60,7 @@ require(["require.config"],function(){
                         _this.totalprice();
                     }
                     if(target.className=="down"){
+                        
                         $(target).prev().val(Number($(target).prev().val())-1);
                         if(Number($(target).prev().val()<=0)){
                             alert("数量不能小于0哦");
@@ -53,11 +71,13 @@ require(["require.config"],function(){
                             cnum=$(target).prev().val();
                         let hprice = _this.hprice(cprice,cnum);
                         console.log(cprice,cnum)
+                        console.log(1234567890)
                         $(target).parent().next().next().children().html(hprice);
     
                         _this.totalprice();
                     }
                     if(target.className=="delbtn"){
+                        
                         var index;
                          _this.data.some((item,i) => {
                                 index=i
@@ -69,6 +89,15 @@ require(["require.config"],function(){
                        _this.render(_this.data);
                        localStorage.setItem("shopcar" , JSON.stringify(_this.data));
                        
+                    }
+                    if(target.className=="t_num"){
+                        $(".t_num").on("blur",function(){
+                        let cprice=$(target).parent().prev().children().html(),
+                            cnum=$(target).val();
+                        let hprice = _this.hprice(cprice,cnum);
+                        $(target).parent().next().next().children().html(hprice);
+                        _this.totalprice();
+                        })
                     }
                 })
             },
@@ -128,6 +157,14 @@ require(["require.config"],function(){
                 $("#goshop").on("click",function(){
                     location.href="/html/list.html"
                 })
+            },
+            clear(){
+                var _this=this;
+                $("#clearuser").on("click",function(){
+                    localStorage.removeItem("user");
+                    _this.user_data()
+                })
+
             }
 
         })

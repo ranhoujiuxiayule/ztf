@@ -77,7 +77,7 @@ main{
             width: 100%;
             height: 300px;
             border: 1px solid;
-            form{
+            .form1{
                 width: 100%;
                 height: 100%;
                 display: flex;
@@ -100,14 +100,79 @@ main{
                             color: #b52024;
                         }
                     }
-                    .login{
+                    .login1{
                         font-size: 23px;
                         background: #b52024;
                         color: white;
                     }
                 }
             }
-            
+            .form2{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                display: none;
+                label{
+                    width: 100%;
+                    height: 45px;
+                    margin-top: 20px;
+                }
+                label:first-child{
+                    display: flex;
+                    input{
+                        width: 65%;
+                        height: 100%;
+                        margin-left:16px;
+                    }
+                    button{
+                        width: 25%;
+                        height: 100%;
+                        margin-left: 10px;
+                    }
+                }
+                label:nth-child(2){
+                    display: flex;
+                    input{
+                        width: 35%;
+                        height: 100%;
+                        margin-left: 16px;
+                    }
+                    span{
+                        width: 25%;
+                        height: 105%;
+                        text-align: center;
+                        font-size: 25px;
+                        border: 1px solid;
+                        line-height: 45px;
+                        margin-right: 40px;
+                    }
+                    a{
+                        font-size: 13px;
+                        color: black;
+                    }
+                }
+                label:nth-child(3){
+                    display: flex;
+                    input{
+                        width: 92%;
+                        height: 100%;
+                        margin-left: 16px;
+                    }
+                }
+                label:nth-child(4){
+                    display: flex;
+                    input{
+                        width: 92%;
+                        height: 100%;
+                        margin-left: 16px;
+                        background: #b52024;
+                        font-size: 23px;
+                        color: white;
+                    }
+                }
+                
+            }
         }
         .r4{
             width: 100%;
